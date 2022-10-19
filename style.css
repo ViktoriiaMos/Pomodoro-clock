@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    display:block;
+    align-items: center;
+  
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#buttons{
+    display: flex;
+    justify-content:center;
+}
+main {
+    width: 100%;
+ display: flex;
+ justify-content: center;
+}
+.rounded-circle {
+  border: 2px solid #88c9e6;
+  background: lightblue;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
