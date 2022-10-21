@@ -79,11 +79,11 @@
         startTimer = setInterval(timer, 1000)
     } else if(startTimer){
         clearInterval(startTimer);
-        //doesn't work. How to make clock stop 0:00
+     
     } else if(min.innerText === 0 && sec.innerText <= 0){   
         min.innerText = 0;
         sec.innerText = 00;
-        //doesn't work. Reset clock clicking on the clock if clock stoped and not 0:00
+     
     } else if((min.innerText !== 0 || sec.innerText !== 0) || (min.innerText !== 0 && sec.innerText !== 0)){         
         min.innerText = 0;
         sec.innerText = 00;
@@ -91,7 +91,11 @@
 });
 
     function timer(){
-    if(sec.innerText != 0){
+    if(sec.innerText <= '1' && min.innerText === '0'){
+     clearInterval(startTimer);
+     sec.innerText = '00';
+     return;
+    }else if(sec.innerText != 0){
         sec.innerText --;
     }else if(min.innerText != 0 && sec.innerText == 0){
         sec.innerText = 59;
